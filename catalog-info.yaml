@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: snvu4oe8u-nodejs-gitops
+  description: This is GitOps manifest for snvu4oe8u-nodejs   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: snvu4oe8u-nodejs
+    janus-idp.io/tekton: snvu4oe8u-nodejs 
+    backstage.io/kubernetes-id: snvu4oe8u-nodejs 
+    backstage.io/techdocs-ref: dir:. 
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:snvu4oe8u-nodejs
